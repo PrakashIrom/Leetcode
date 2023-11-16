@@ -9,7 +9,11 @@ class Solution {
             else
                 maxEnding[i]=nums[i];
         }
-        Arrays.sort(maxEnding);
-        return maxEnding[nums.length-1];
+        int large=maxEnding[0];
+        for(int i=0;i<nums.length-1;i++){
+            if(large<maxEnding[i+1])
+                large=maxEnding[i+1];
+        }
+        return large;
     }
 }
