@@ -1,4 +1,5 @@
-class Solution {
+class Solution
+{
     public int search(int[] nums, int target) {
         
      int low=0,high=nums.length-1;
@@ -9,7 +10,7 @@ class Solution {
          
       if(nums[mid]==target)
           return mid;
-      else if(nums[low]<=nums[mid])//check whether first half of the array is sorted or not
+      else if(nums[low]<=nums[mid])//check whether first half of the array is sorted or not 
       {
          if(nums[low]<=target && target<nums[mid])//checking whether the target is in the first sorted half or not
              high=mid-1;
