@@ -1,19 +1,18 @@
-import java.util.Scanner;
 class Solution {
     public int removeDuplicates(int[] nums) {
         
      LinkedList<Integer> stack=new LinkedList<>();
+     stack.push(nums[0]);
         
-        for(int i=0;i<nums.length;i++)
+     if(nums.length==1)
+         return 1;
+        
+        for(int i=1;i<nums.length;i++)
         {
-            if(stack.isEmpty())
-                
-                stack.push(nums[i]);
             
-            else if(!stack.isEmpty() && stack.peek()!=nums[i])
+            if(stack.peek()!=nums[i])
             {
-                stack.push(nums[i]);   
-                
+                stack.push(nums[i]);
                 nums[stack.size()-1]=stack.peek();
             }
             
