@@ -4,8 +4,7 @@ class Solution {
         
         for(i in 0 until prices.size-1){
             if(prices[i]<prices[i+1]){
-                val sum=prices[i+1]-prices[i]
-                profit+=sum
+                profit=prices[i+1]-prices[i]+profit
             }
         }
         return profit
