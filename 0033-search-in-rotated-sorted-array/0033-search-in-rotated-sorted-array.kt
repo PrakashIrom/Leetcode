@@ -10,7 +10,7 @@ class Solution {
             if(nums[mid]==target){
                 return mid
             }
-            else if(nums[0]<=nums[mid])
+            else if(nums[0]<=nums[mid])//exception case is there when low and mid points at the same element
             {
                 if(nums[0]<=target && target<nums[mid]){
                     high=mid-1
