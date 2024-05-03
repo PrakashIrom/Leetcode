@@ -17,7 +17,7 @@ class Solution {
                 {
                     result=sum
                 }
-                else if(sum<target)
+                if(sum<target)
                 {
                     left++
                 }
