@@ -31,7 +31,7 @@ class Solution {
         
         curr=node
         
-        val result: Node?=map[curr]
-      return result
+        return map[curr]
+
     }
 }
