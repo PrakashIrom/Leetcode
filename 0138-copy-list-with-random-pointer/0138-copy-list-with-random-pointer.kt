@@ -20,7 +20,9 @@ class Solution {
             map.put(curr,copy)
             curr=curr?.next
         }
+        
         curr=node
+        
         while(curr!=null){
             (map[curr])?.next=map[curr?.next]
             (map[curr])?.random=map[curr?.random]
