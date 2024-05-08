@@ -1,22 +1,13 @@
 class Solution {
     fun isSubsequence(s: String, t: String): Boolean {
        
-        var str=""
-        var n=0
+        var j=0
+        var i=0
         
-        for(i in 0 until s.length){
-            
-            for(j in n until t.length){
-                if(s[i]==t[j]){
-                    str+=t[j]
-                    n=j+1
-                    break
-                }
-            }
-        }
-        
-        if(str.contains(s)) return true
-        
-        return false
+       while(i<s.length && j<t.length){
+           if(s[i]==t[j]) i++
+           j++
+       }
+        return (i==s.length)
     }
 }
