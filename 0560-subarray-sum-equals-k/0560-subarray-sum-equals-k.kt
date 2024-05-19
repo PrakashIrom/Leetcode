@@ -16,7 +16,7 @@ class Solution {
             }  
             
             if(map.containsKey(sum)){
-                map[sum] = map[sum]!!+1
+                map[sum] = map[sum]!!+1 // because of -1 and 0 the sum might already be there in the map
             }
             else{
                 map[sum]=1
