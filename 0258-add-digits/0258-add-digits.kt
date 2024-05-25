@@ -10,7 +10,8 @@ class Solution {
             sum+=rem
             num1=num1/10
             
-            if(num1==0 && sum>9){
+            if(num1==0){
+                if(sum<10) return sum
                num1=sum
                 sum=0
             } 
