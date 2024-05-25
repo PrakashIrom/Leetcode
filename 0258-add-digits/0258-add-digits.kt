@@ -11,10 +11,9 @@ class Solution {
             num1=num1/10
             
             if(num1==0 && sum>9){
-                num1=sum
+               num1=sum
                 sum=0
-            }
-            
+            } 
         }
         return sum
     }
