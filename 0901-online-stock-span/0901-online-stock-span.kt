@@ -14,7 +14,6 @@ class StockSpanner() {
         {
             stock.push(price)
             span.push(1)
-            return 1
         }
         else
         {
@@ -28,6 +27,7 @@ class StockSpanner() {
               
             span.push(count)
             stock.push(price)
+            
         }
         
       return count
