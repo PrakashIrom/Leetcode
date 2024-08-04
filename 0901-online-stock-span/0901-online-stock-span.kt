@@ -17,20 +17,14 @@ class StockSpanner() {
         }
         else{
             
-            if(!stock.isEmpty() && stock.peek()<=price){
                 while(stock.isNotEmpty() && stock.peek()<=price){
                     count+=span.peek()
                     span.pop()
                     stock.pop()
                 }
-                stock.push(price)
                 span.push(count)
-            }
-            else{
-                span.push(1)
                 stock.push(price)
-                return 1
-            }
+               // return count
         }
       return count
     }
