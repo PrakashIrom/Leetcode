@@ -10,22 +10,26 @@ class StockSpanner() {
         
         var count=1
         
-        if(stock.isEmpty()){
+        if(stock.isEmpty())
+        {
             stock.push(price)
             span.push(1)
             return 1
         }
-        else{
+        else
+        {
             
-                while(stock.isNotEmpty() && stock.peek()<=price){
-                    count+=span.peek()
-                    span.pop()
-                    stock.pop()
-                }
-                span.push(count)
-                stock.push(price)
-               // return count
+           while(stock.isNotEmpty() && stock.peek()<=price)
+            {
+                count+=span.peek()
+                span.pop()
+                stock.pop()
+            }
+              
+            span.push(count)
+            stock.push(price)
         }
+        
       return count
     }
                    
