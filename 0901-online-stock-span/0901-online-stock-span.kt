@@ -20,8 +20,7 @@ class StockSpanner() {
             
            while(stock.isNotEmpty() && stock.peek()<=price)
             {
-                count+=span.peek()
-                span.pop()
+                count+=span.pop()
                 stock.pop()
             }
               
