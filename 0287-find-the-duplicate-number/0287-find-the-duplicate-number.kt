@@ -1,11 +1,25 @@
 class Solution {
     fun findDuplicate(nums: IntArray): Int {
-      var set = HashSet<Int>()
-      
-      for(i in 0 until nums.size){
-          if(set.add(nums[i])==false) return nums[i]
-      }
-      
-      return 0
+
+        var slow=0
+        var fast=0
+        
+        // proves we have a cycle
+        while(true){
+            
+            fast = nums[nums[fast]]
+            slow = nums[slow]
+            
+            if(slow==fast) break
+        }
+        
+        fast = 0
+        
+        while(fast!=slow){
+            fast=nums[fast]
+            slow=nums[slow]
+        }
+   
+      return fast
     }
 }
