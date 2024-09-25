@@ -10,9 +10,6 @@
  */
 class Solution {
     
-    var height = 1
-    var max = 0
-    
     fun maxDepth(root: TreeNode?): Int {
         
         if(root==null) return 0
