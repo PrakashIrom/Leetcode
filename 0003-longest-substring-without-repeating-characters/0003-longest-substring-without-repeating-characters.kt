@@ -1,5 +1,7 @@
 class Solution {
+    
     fun lengthOfLongestSubstring(s: String): Int {
+       
         // use hashset
         // store the length of hashset
         // use window sliding technique to traverse
@@ -13,15 +15,15 @@ class Solution {
             while(j<s.length){
                 if(hashSet.add(s[j])==false){
                     length=max(hashSet.size,length)
-                    hashSet.remove(s[i])
+                    //hashSet.remove(s[i])
                     break
                 }
                 j++
             }
             
+            // this condition for when j reaches the end of string s without duplicates
             if(j==s.length) return max(hashSet.size,length)
             
-           
         }
         return length
     }
