@@ -51,4 +51,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0937-online-stock-span](https://github.com/PrakashIrom/Leetcode/tree/master/0937-online-stock-span) |
+## Array
+|  |
+| ------- |
+| [0724-find-pivot-index](https://github.com/PrakashIrom/Leetcode/tree/master/0724-find-pivot-index) |
+## Prefix Sum
+|  |
+| ------- |
+| [0724-find-pivot-index](https://github.com/PrakashIrom/Leetcode/tree/master/0724-find-pivot-index) |
 <!---LeetCode Topics End-->
