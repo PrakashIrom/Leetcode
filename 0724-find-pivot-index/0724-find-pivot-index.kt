@@ -1,27 +1,38 @@
 class Solution {
     fun pivotIndex(nums: IntArray): Int {
         
-        var lsum = 0
-        var rsum = 0
+        var sum1=0
+        var sum2=0
+        val length=nums.size
         
-        for(i in 0 until nums.size-1){
-            lsum+=nums[i]
+        for(i in length-1 downTo 0)
+        {
+            sum1=nums[i]+sum1
         }
         
-        if(lsum-nums[nums.size-1] == 0) return nums.size-1
-        
-        lsum = lsum-nums[nums.size-1]
-        
-        for(i in nums.size-1 downTo 2){
+        for(i in 0 until length)
+        {
             
-            rsum+=nums[i]
-            lsum-=nums[i-1]    
+           sum1-=nums[i]
             
-            if(rsum == lsum ) return i-1
+            if(sum1==0 && i==0)
+            {
+                return 0
+            }
+            else if(sum2==0 && i==length-1)
+            {
+                return length-1
+            }
+            else if (sum1==sum2)
+            {
+                return i
+            }
+            else
+            {
+                sum2+=nums[i]
+            }
         }
         
-        if(rsum+nums[1]==0) return 0
-            
         return -1
         
     }
