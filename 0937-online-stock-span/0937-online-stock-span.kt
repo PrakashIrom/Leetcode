@@ -9,14 +9,6 @@ class StockSpanner() {
     fun next(price: Int): Int {
         
         var count=1
-        
-        /*if(stock.isEmpty())
-        {
-            stock.push(price)
-            span.push(1)
-        }
-        else
-        {*/
             
            while(stock.isNotEmpty() && stock.peek()<=price)
             {
@@ -26,8 +18,6 @@ class StockSpanner() {
               
             span.push(count)
             stock.push(price)
-            
-        //}
         
       return count
     }
